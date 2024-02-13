@@ -224,18 +224,18 @@ public class Testing {
 		        	} else {
 		        	    System.out.println("series is not selected");
 		        	}
-		    	    WebElement element = driver.findElement(By.xpath("(//i[@class='fa fa-arrow-circle-left ngx-gallery-icon-content'])[5]"));
-
-			         // Click the element three times
-			         for (int i = 0; i < 3; i++) {
-			             element.click();
-			             // You may want to introduce a small delay between clicks to avoid any issues
-			             try {
-			                 Thread.sleep(1000); // Sleep for 1 second
-			             } catch (InterruptedException e) {
-			                 e.printStackTrace();
-			             }
-			         }	    
+//		    	    WebElement element = driver.findElement(By.xpath("(//i[@class='fa fa-arrow-circle-left ngx-gallery-icon-content'])[5]"));
+//
+//			         // Click the element three times
+//			         for (int i = 0; i < 3; i++) {
+//			             element.click();
+//			             // You may want to introduce a small delay between clicks to avoid any issues
+//			             try {
+//			                 Thread.sleep(1000); // Sleep for 1 second
+//			             } catch (InterruptedException e) {
+//			                 e.printStackTrace();
+//			             }
+//			         }	    
 		    	    
 		    	WebElement section = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//span[text()='451'])[1]")));
 		    	if (section.isEnabled() && section.isDisplayed()) {
@@ -466,10 +466,6 @@ public class Testing {
 		    }
 		 
 		 
-		 
-		 
-		 
-	
 		@AfterTest
 		public void close() throws Exception
 		{

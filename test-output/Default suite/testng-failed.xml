@@ -6,9 +6,7 @@
       <class name="com.test.apollo3_Sanity.Testing">
         <methods>
           <include name="setup"/>
-          <include name="Cell_annotation"/>
           <include name="Atlas_Editor"/>
-          <include name="Manual_Registration"/>
           <include name="close"/>
         </methods>
       </class> <!-- com.test.apollo3_Sanity.Testing -->
