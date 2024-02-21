@@ -154,6 +154,26 @@ public class Testing {
 	 		    System.out.println("FB-47 not clicked: " + e.getMessage());
 	 		}
 	    	 checkConsoleLog();
+	    	 
+	    	 
+	    	 String parentWindow = driver.getWindowHandle();
+	    	 try {
+		 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+		 		   viewericon.click();
+		 		    System.out.println("viewer icon is clicked successfully.");
+		 		    Thread.sleep(2000);
+		 		} catch (Exception e) {
+		 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+		 		}
+	    	 
+	    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+			  Set<String> allWindows = driver.getWindowHandles();
+		        for (String window : allWindows) {
+		            if (!window.equals(parentWindow)) {
+		                driver.switchTo().window(window);
+		                break;
+		            }
+		        }
 	    		 
 	    	
 	    	 System.out.println("************************************Series set validation done********************************");
@@ -287,10 +307,10 @@ public class Testing {
 		    	}
 			    WebElement element = driver.findElement(By.xpath("(//i[@class='fa fa-arrow-circle-left ngx-gallery-icon-content'])[2]"));
 
-		         // Click the element three times
+		       
 		         for (int i = 0; i < 3; i++) {
 		             element.click();
-		             // You may want to introduce a small delay between clicks to avoid any issues
+		            
 		             try {
 		                 Thread.sleep(1000); // Sleep for 1 second
 		             } catch (InterruptedException e) {
