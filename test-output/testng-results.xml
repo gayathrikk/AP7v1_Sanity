@@ -2,40 +2,40 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-21T13:13:49 IST" name="Default suite" finished-at="2024-02-21T13:17:51 IST" duration-ms="242472">
+  <suite started-at="2024-02-26T09:29:26 IST" name="Default suite" finished-at="2024-02-26T09:33:09 IST" duration-ms="222510">
     <groups>
     </groups>
-    <test started-at="2024-02-21T13:13:49 IST" name="Default test" finished-at="2024-02-21T13:17:51 IST" duration-ms="242472">
+    <test started-at="2024-02-26T09:29:26 IST" name="Default test" finished-at="2024-02-26T09:33:09 IST" duration-ms="222510">
       <class name="com.test.apollo3_Sanity.Testing">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-21T13:13:49 IST" name="setup" finished-at="2024-02-21T13:13:50 IST" duration-ms="764" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-26T09:29:26 IST" name="setup" finished-at="2024-02-26T09:29:27 IST" duration-ms="707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:1, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-21T13:13:50 IST" name="login" finished-at="2024-02-21T13:14:00 IST" duration-ms="10392" status="PASS">
+        <test-method signature="login()[pri:1, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-26T09:29:27 IST" name="login" finished-at="2024-02-26T09:29:35 IST" duration-ms="8316" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="series_set()[pri:2, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-21T13:14:00 IST" name="series_set" finished-at="2024-02-21T13:14:18 IST" duration-ms="17817" status="PASS">
+        <test-method signature="series_set()[pri:2, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-26T09:29:35 IST" name="series_set" finished-at="2024-02-26T09:29:53 IST" duration-ms="17324" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- series_set -->
-        <test-method signature="HD()[pri:3, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-21T13:14:18 IST" name="HD" finished-at="2024-02-21T13:14:38 IST" duration-ms="20069" status="PASS">
+        <test-method signature="HD()[pri:3, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-26T09:29:53 IST" name="HD" finished-at="2024-02-26T09:30:13 IST" duration-ms="20635" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HD -->
-        <test-method signature="Atlas_Editor()[pri:4, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-21T13:14:38 IST" name="Atlas_Editor" finished-at="2024-02-21T13:15:04 IST" duration-ms="26030" status="PASS">
+        <test-method signature="Atlas_Editor()[pri:4, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-26T09:30:13 IST" name="Atlas_Editor" finished-at="2024-02-26T09:30:29 IST" duration-ms="15445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Atlas_Editor -->
-        <test-method signature="Cell_annotation()[pri:5, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-21T13:15:04 IST" name="Cell_annotation" finished-at="2024-02-21T13:17:23 IST" duration-ms="139300" status="PASS">
+        <test-method signature="Cell_annotation()[pri:5, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-26T09:30:29 IST" name="Cell_annotation" finished-at="2024-02-26T09:32:47 IST" duration-ms="138328" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cell_annotation -->
-        <test-method signature="Manual_Registration()[pri:6, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-21T13:17:23 IST" name="Manual_Registration" finished-at="2024-02-21T13:17:50 IST" duration-ms="27075" status="PASS">
+        <test-method signature="Manual_Registration()[pri:6, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-26T09:32:47 IST" name="Manual_Registration" finished-at="2024-02-26T09:33:09 IST" duration-ms="21584" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Manual_Registration -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-21T13:17:50 IST" name="close" finished-at="2024-02-21T13:17:51 IST" duration-ms="996" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:com.test.apollo3_Sanity.Testing@a530d0a]" started-at="2024-02-26T09:33:09 IST" name="close" finished-at="2024-02-26T09:33:09 IST" duration-ms="141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

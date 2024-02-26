@@ -126,7 +126,7 @@ public class Testing {
 	
 			
 	    	 try {
-	    		    WebElement Humanfetus = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@class='cdk-table nb-tree-grid']//tr[6]")));
+	    		    WebElement Humanfetus = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[6]")));
 	    		    Humanfetus.click();
 	    		    System.out.println("Human Fetus brain clicked successfully.");
 	    		    Thread.sleep(2000);
@@ -136,7 +136,7 @@ public class Testing {
 	    	 checkConsoleLog();
 	    	 
 	    	 try {
-	    		    WebElement Brain = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@class='cdk-table nb-tree-grid']//tr[7]//td[2]")));
+	    		    WebElement Brain = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[7]//td[2]")));
 	    		    Brain.click();
 	    		    System.out.println(" Brain clicked successfully.");
 	    		    Thread.sleep(2000);
@@ -146,7 +146,7 @@ public class Testing {
 	    	 checkConsoleLog();
 	    	 
 	    	 try {
-	 		    WebElement FB_47 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@class='cdk-table nb-tree-grid']//tr[48]//td[3]")));
+	 		    WebElement FB_47 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[48]//td[3]")));
 	 		    FB_47.click();
 	 		    System.out.println("FB-47 clicked successfully.");
 	 		    Thread.sleep(2000);
