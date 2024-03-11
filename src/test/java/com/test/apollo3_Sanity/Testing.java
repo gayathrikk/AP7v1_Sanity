@@ -175,7 +175,7 @@ public class Testing {
 		            }
 		        }
 	    		 
-	    	
+	    	Thread.sleep(5000);
 	    	 System.out.println("************************************Series set validation done********************************");
 	
 	    	 
