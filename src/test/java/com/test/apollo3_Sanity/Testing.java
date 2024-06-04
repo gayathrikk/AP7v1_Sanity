@@ -397,15 +397,15 @@ public class Testing {
 		    	    System.out.println("Manual Registration page is not opened");
 		    	}
 		    	Thread.sleep(8000);
-		    	checkConsoleLog();
+		    	 checkConsoleLog();
 		    	
-		    	WebElement back = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='Back']")));
-		     	if (back.isEnabled() && back.isDisplayed()) {
-		     	    back.click();
-		     	    System.out.println("Back to viewer page");
-		     	} else {
-		     	    System.out.println("Back to viewer page");
-		     	}
+		    	// WebElement back = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='Back']")));
+		     // 	if (back.isEnabled() && back.isDisplayed()) {
+		     // 	    back.click();
+		     // 	    System.out.println("Back to viewer page");
+		     // 	} else {
+		     // 	    System.out.println("Back to viewer page");
+		     // 	}
 		     	Thread.sleep(5000);
 		     	checkConsoleLog();
 		     	Reg_API();
