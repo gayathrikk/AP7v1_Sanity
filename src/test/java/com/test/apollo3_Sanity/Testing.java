@@ -345,7 +345,7 @@ public class Testing {
 		     	} else {
 		     	    System.out.println("Back to viewer page");
 		     	}
-		     	Thread.sleep(5000);
+		     	Thread.sleep(8000);
 		     	checkConsoleLog();
 		     	//Cell_API();
 		     	
