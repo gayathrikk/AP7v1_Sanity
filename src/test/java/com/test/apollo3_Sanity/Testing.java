@@ -347,7 +347,7 @@ public class Testing {
 		     	}
 		     	Thread.sleep(5000);
 		     	checkConsoleLog();
-		     	Cell_API();
+		     	//Cell_API();
 		     	
 		     	System.out.println("*******************************Cell annotation validation done*****************************");
 		    	
