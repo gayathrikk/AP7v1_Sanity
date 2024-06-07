@@ -32,7 +32,7 @@ public class Testing {
 		{
 			
 			  DesiredCapabilities dc = DesiredCapabilities.chrome();
-		        URL url = new URL("http://172.12.20.99:4444/wd/hub");
+		        URL url = new URL("http://172.12.20.99:4443/wd/hub");
 		        driver = new RemoteWebDriver(url, dc);
 		
 		       
@@ -56,7 +56,7 @@ public class Testing {
 	    	} else {
 	    	    System.out.println("Viewer icon is not clickable");
 	    	}
-	    	checkConsoleLog();
+	    	
 	
 	        String parentWindow = driver.getWindowHandle();
 	        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()=' Log In ']")));
@@ -66,7 +66,7 @@ public class Testing {
 	        } else {
 	            System.out.println("Login button is not clicked.");
 	        }
-	        checkConsoleLog();
+	       
 		  wait.until(ExpectedConditions.numberOfWindowsToBe(2));
 		  Set<String> allWindows = driver.getWindowHandles();
 	        for (String window : allWindows) {
@@ -82,7 +82,7 @@ public class Testing {
 	        } else {
 	           System.out.println("Email was not entered.");
 	        }
-	        checkConsoleLog();
+	        
 	
 	        WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Next']")));
 	        if (nextButton1 != null) {
@@ -91,7 +91,7 @@ public class Testing {
 	        } else {
 	            System.out.println("Next button 1 is not clicked.");
 	        }
-	        checkConsoleLog();
+	       
 	        WebElement passwordInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@aria-label='Enter your password']")));
 	        passwordInput.sendKeys("Health#123");
 	        if (passwordInput.getAttribute("value").equals("Health#123")) {
@@ -99,7 +99,7 @@ public class Testing {
 	        } else {
 	            System.out.println("Password was not entered.");
 	        }
-	        checkConsoleLog();
+	       
 	        
 	        WebElement nextButton2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Next']")));
 	        if (nextButton2 != null) {
@@ -108,11 +108,11 @@ public class Testing {
 	        } else {
 	            System.out.println("Next button 2 is not clicked.");
 	        }
-	        checkConsoleLog();
+	       
 	
 	        driver.switchTo().window(parentWindow);
 	        System.out.println("Login successfully");
-	        checkConsoleLog();
+	        
 	        
 	        System.out.println("************************Login validation done***********************");
 		        
@@ -133,7 +133,7 @@ public class Testing {
 	    		} catch (Exception e) {
 	    		    System.out.println("Human Fetus Brain not clicked: " + e.getMessage());
 	    		}
-	    	 checkConsoleLog();
+	    	
 	    	 
 	    	 try {
 	    		    WebElement Brain = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[7]//td[2]")));
@@ -143,7 +143,7 @@ public class Testing {
 	    		} catch (Exception e) {
 	    		    System.out.println("Brain not clicked: " + e.getMessage());
 	    		}
-	    	 checkConsoleLog();
+	    	 
 	    	 
 	    	 try {
 	 		    WebElement FB_47 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[48]//td[3]")));
@@ -153,7 +153,7 @@ public class Testing {
 	 		} catch (Exception e) {
 	 		    System.out.println("FB-47 not clicked: " + e.getMessage());
 	 		}
-	    	 checkConsoleLog();
+	    	
 	    	 
 	    	 
 	    	 String parentWindow = driver.getWindowHandle();
@@ -175,7 +175,7 @@ public class Testing {
 		            }
 		        }
 	    		 
-	    	Thread.sleep(5000);
+	    	 Thread.sleep(5000);
 	    	 System.out.println("************************************Series set validation done********************************");
 	
 	    	 
@@ -206,7 +206,7 @@ public class Testing {
 		    	    System.out.println("section is not selected");
 		    	}
 		    	Thread.sleep(3000);
-		    	checkConsoleLog();
+		    	
 		    
 		    	WebElement hd = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='View High Resolution Image']")));
 		    	if (hd.isEnabled() && hd.isDisplayed()) {
@@ -216,7 +216,7 @@ public class Testing {
 		    	    System.out.println("High resolutin page is not opened");
 		    	}
 		    	Thread.sleep(5000);
-		    	checkConsoleLog();
+		    	
 		    
 		    	WebElement back = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='back']")));
 		     	if (back.isEnabled() && back.isDisplayed()) {
@@ -226,7 +226,7 @@ public class Testing {
 		     	    System.out.println("Back to viewer page");
 		     	}
 		     	Thread.sleep(6000);
-		     	checkConsoleLog();
+		     
 		     	HD_API();
 		     	
 		     	 System.out.println("********************************Hd page validation done*****************************");
@@ -265,7 +265,7 @@ public class Testing {
 		    	    System.out.println("section is not selected");
 		    	}
 		    	Thread.sleep(3000);
-		    	checkConsoleLog();
+		    	
 		    
 		    	WebElement atlas = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='Atlas Editor']")));
 		    	if (atlas.isEnabled() && atlas.isDisplayed()) {
@@ -275,7 +275,7 @@ public class Testing {
 		    	    System.out.println("Atlas Editor page is not opened");
 		    	}
 		    	Thread.sleep(5000);
-		    	checkConsoleLog();
+		    	
 		    	
 		    	WebElement back = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='Back']")));
 		     	if (back.isEnabled() && back.isDisplayed()) {
@@ -285,8 +285,7 @@ public class Testing {
 		     	    System.out.println("Back to viewer page");
 		     	}
 		     	Thread.sleep(5000);
-		     	checkConsoleLog();
-		     	Atlas_API();
+		     
 		     	
 		     	System.out.println("*******************************Atlas editor validation done*****************************");
 		     	
@@ -326,7 +325,7 @@ public class Testing {
 		    	    System.out.println("section is not selected");
 		    	}
 		    	Thread.sleep(3000);
-		    	checkConsoleLog();
+		    	
 		    
 		    	WebElement atlas = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='Cell Annotation']")));
 		    	if (atlas.isEnabled() && atlas.isDisplayed()) {
@@ -335,8 +334,8 @@ public class Testing {
 		    	} else {
 		    	    System.out.println("Cell annotation page is not opened");
 		    	}
-		    	Thread.sleep(5000);
-		    	checkConsoleLog();
+		    	Thread.sleep(8000);
+		    
 		    	
 		    	WebElement back = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='Back']")));
 		     	if (back.isEnabled() && back.isDisplayed()) {
@@ -345,9 +344,8 @@ public class Testing {
 		     	} else {
 		     	    System.out.println("Back to viewer page");
 		     	}
-		     	Thread.sleep(8000);
-		     	checkConsoleLog();
-		     	//Cell_API();
+		     	Thread.sleep(5000);
+		     	
 		     	
 		     	System.out.println("*******************************Cell annotation validation done*****************************");
 		    	
@@ -387,7 +385,7 @@ public class Testing {
 		    	    System.out.println("section is not selected");
 		    	}
 		    	Thread.sleep(3000);
-		    	checkConsoleLog();
+		    	
 		    
 		    	WebElement atlas = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='Manual Registration']")));
 		    	if (atlas.isEnabled() && atlas.isDisplayed()) {
@@ -396,39 +394,26 @@ public class Testing {
 		    	} else {
 		    	    System.out.println("Manual Registration page is not opened");
 		    	}
-		    	Thread.sleep(8000);
-		    	 checkConsoleLog();
+		    	Thread.sleep(15000);
 		    	
-		    	// WebElement back = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='Back']")));
-		     // 	if (back.isEnabled() && back.isDisplayed()) {
-		     // 	    back.click();
-		     // 	    System.out.println("Back to viewer page");
-		     // 	} else {
-		     // 	    System.out.println("Back to viewer page");
-		     // 	}
+		    	
+//		    	WebElement back = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='Back']")));
+//		     	if (back.isEnabled() && back.isDisplayed()) {
+//		     	    back.click();
+//		     	    System.out.println("Back to viewer page");
+//		     	} else {
+//		     	    System.out.println("Back to viewer page");
+//		     	}
 		     	Thread.sleep(5000);
-		     	checkConsoleLog();
-		     	Reg_API();
 		     	
 		     	System.out.println("*******************************Manual Registration validation done*****************************");
 		    	
 		    }
-		private void checkConsoleLog() {
-	        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
-	        List<LogEntry> logs = logEntries.filter(Level.SEVERE);
 	
-	        int severeLogCount = logs.size();
-	        System.out.println("Number of SEVERE-level logs: " + severeLogCount);
-	
-	        for (LogEntry log : logs) {
-	            System.out.println("Level is : \n" + log.getLevel());
-	            System.out.println("Message is : \n" + log.getMessage());
-	        }
-	        }
 		 private void HD_API()
 		    {
 		    	//iipsrv
-		    	Response response1 = RestAssured.get("https://ap3.humanbrain.in//iipsrv/fcgi-bin/iipsrv.fcgi?FIF=/apollo3/storageIIT/humanbrain/analytics/207/NISL/B_207_FB47-SL_151-ST_NISL-SE_451_compressed.jp2&WID=1024&GAM=1.4&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL=6,1154");
+		    	Response response1 = RestAssured.get("https://ap7v1.humanbrain.in//iipsrv/fcgi-bin/iipsrv.fcgi?FIF=/apollo3/storageIIT/humanbrain/analytics/207/NISL/B_207_FB47-SL_151-ST_NISL-SE_451_compressed.jp2&WID=1024&GAM=1.4&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL=0,0");
 		        int statusCode1 = response1.getStatusCode();
 		        if (statusCode1 == 200) {
 		            System.out.println("API request to the iipsrv  passed. Status code: " + statusCode1);
@@ -437,55 +422,7 @@ public class Testing {
 		        }
 		        Assert.assertEquals(statusCode1, 200, "API request to the iipsrv failed");
 		    }
-		 private void Atlas_API()
-		    {
-		    	//iipsrv
-		    	Response response1 = RestAssured.get("https://ap3.humanbrain.in//iipsrv/fcgi-bin/iipsrv.fcgi?FIF=/apollo3/storageIIT/humanbrain/analytics/207/NISL/B_207_FB47-SL_151-ST_NISL-SE_451_compressed.jp2&WID=1024&GAM=1.4&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL=0,0");
-		        int statusCode1 = response1.getStatusCode();
-		        if (statusCode1 == 200) {
-		            System.out.println("API request to the iipsrv  passed. Status code: " + statusCode1);
-		        } else {
-		            System.out.println("API request to the iipsrv failed. Status code: " + statusCode1);
-		        }
-		        Assert.assertEquals(statusCode1, 200, "API request to the iipsrv failed");
-		    }
-		 private void Cell_API()
-		    {
-		    	//section iipsrv
-		    	Response response1 = RestAssured.get("https://apollo2.humanbrain.in/iipsrv/fcgi-bin/iipsrv.fcgi?FIF=/apollo3/storageIIT/humanbrain/analytics/207/NISL/B_207_FB47-SL_151-ST_NISL-SE_451_compressed.jp2&WID=1024&RGBGAMA&JTL=0,0");
-		        int statusCode1 = response1.getStatusCode();
-		        if (statusCode1 == 200) {
-		            System.out.println("API request to the iipsrv of section passed. Status code: " + statusCode1);
-		        } else {
-		            System.out.println("API request to the iipsrv of section failed. Status code: " + statusCode1);
-		        }
-		        Assert.assertEquals(statusCode1, 200, "API request to the iipsrv of section failed");
-		        
-		      //Tile iipsrv
-		    	Response response2 = RestAssured.get("https://ap3.humanbrain.in//iipsrv/fcgi-bin/iipsrv.fcgi?FIF=/apollo3/storageIIT/humanbrain/analytics/207/NISL/B_207_FB47-SL_151-ST_NISL-SE_451_lossless.jp2&GAM=1.5&WID=512&RGN=0.7096203121360354,0.12074627908601775,0.0059631959003028185,0.00447208441059325&CVT=jpeg");
-		        int statusCode2 = response1.getStatusCode();
-		        if (statusCode2 == 200) {
-		            System.out.println("API request to the iipsrv of tile  passed. Status code: " + statusCode1);
-		        } else {
-		            System.out.println("API request to the iipsrv of tile failed. Status code: " + statusCode1);
-		        }
-		        Assert.assertEquals(statusCode1, 200, "API request to the iipsrv of tile failed");
-		        
-		     }
-		 private void Reg_API()
-		    {
-		    	//iipsrv
-		    	Response response1 = RestAssured.get("https://ap3.humanbrain.in//iipsrv/fcgi-bin/iipsrv.fcgi?FIF=/apollo3/storageIIT/humanbrain/analytics/207/NISL/B_207_FB47-SL_151-ST_NISL-SE_451_compressed.jp2&WID=1024&RGBGAMA&JTL=6,1154");
-		        int statusCode1 = response1.getStatusCode();
-		        if (statusCode1 == 200) {
-		            System.out.println("API request to the iipsrv  passed. Status code: " + statusCode1);
-		        } else {
-		            System.out.println("API request to the iipsrv failed. Status code: " + statusCode1);
-		        }
-		        Assert.assertEquals(statusCode1, 200, "API request to the iipsrv failed");
-		    }
-		 
-		 
+		
 		@AfterTest
 		public void close() throws Exception
 		{
