@@ -413,7 +413,7 @@ public class Testing {
 		 private void HD_API()
 		    {
 		    	//iipsrv
-		    	Response response1 = RestAssured.get("https://ap7v1.humanbrain.in//iipsrv/fcgi-bin/iipsrv.fcgi?FIF=/apollo3/storageIIT/humanbrain/analytics/207/NISL/B_207_FB47-SL_151-ST_NISL-SE_451_compressed.jp2&WID=1024&GAM=1.4&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL=0,0");
+		    	Response response1 = RestAssured.get("https://ap6prod.humanbrain.in//iipsrv/fcgi-bin/iipsrv.fcgi?FIF=/apollo3/storageIIT/humanbrain/analytics/141/NISL/B_141_FB40-SL_423-ST_NISL-SE_1267_compressed.jp2&WID=1024&GAM=1.4&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL=5,207");
 		        int statusCode1 = response1.getStatusCode();
 		        if (statusCode1 == 200) {
 		            System.out.println("API request to the iipsrv  passed. Status code: " + statusCode1);
